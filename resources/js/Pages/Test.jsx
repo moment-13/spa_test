@@ -1,9 +1,10 @@
 import React from "react";
 import { Button } from "@mui/material";
 import { Link } from '@inertiajs/react';
-import { TestForm } from "./Compornents/TestForm";
+import { CategoryForm } from "./Compornents/CategoryForm";
 import { InertiaForm } from "./Compornents/InertiaForm";
 import { MuiField } from "./Compornents/MuiField";
+import { TodoList } from "./Compornents/TodoList";
 
 const Test = () => {
     return (
@@ -12,9 +13,10 @@ const Test = () => {
         <Button>text</Button>
         <Button variant="contained">contained</Button>
         <Button variant="outlined">outlined</Button>
-        <TestForm />
+        <CategoryForm />
         <InertiaForm />
         <MuiField />
+        <TodoList />
       </>
     );
   };
