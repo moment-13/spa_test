@@ -10,6 +10,7 @@ const Test = () => {
     return (
       <>
         <Link href="/header" as="button" type="button">Header</Link>
+        <Link href="/test" as="button" type="button">TestPage</Link>
         <Button>text</Button>
         <Button variant="contained">contained</Button>
         <Button variant="outlined">outlined</Button>

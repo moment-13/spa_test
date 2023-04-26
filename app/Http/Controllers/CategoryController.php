@@ -43,9 +43,9 @@ class CategoryController extends Controller
             'user_id' => Auth::id(),
         ]);
 
+        $data = ['category' => $category];
 
-
-        return response()->json($category);
+        return response()->json($$data);
     }
 
     /**

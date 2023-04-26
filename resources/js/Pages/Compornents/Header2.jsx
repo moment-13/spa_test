@@ -6,9 +6,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from '@inertiajs/react';
 
-const  Header = () => {
+const  Header2 = (props) =>  {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -25,12 +24,13 @@ const  Header = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             News
           </Typography>
-          <Button color="inherit" sx={{ flexGrow: 1 }}><Link href={route('dashboard')} >Dashboard</Link></Button>
-          <Button color="inherit" sx={{ flexGrow: 1 }}>Login</Button>
+          <p>{props.exname}</p>
+          <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
     </Box>
   );
 };
 
-export default Header;
+export default Header2;
+
