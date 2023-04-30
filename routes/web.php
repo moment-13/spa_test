@@ -40,7 +40,13 @@ Route::get('/test', function() {
     return Inertia::render('Testpage', ['exname' => 'テストしてるよ', 'category' => Category::first()]);
 });
 
+Route::get('/test2', function() {
+    return Inertia::render('Testpage2', ['exname' => 'テストしてるよ2']);
+});
 
+Route::get('/gridtest', function() {
+    return Inertia::render('GridTest', ['exname' => 'テストしてるよ2']);
+});
 
 // 練習
 Route::get('/header', function () {
