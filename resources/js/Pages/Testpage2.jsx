@@ -7,7 +7,7 @@ const Testpage2 = (props) => {
     return (
         <>
           <Header2 exname={props.exname} />
-          <TodoForm />
+          <TodoForm categories={props.categories} />
 
         </>
     );

@@ -37,11 +37,11 @@ Route::post('/category/store',  [CategoryController::class, 'store'])
 ->middleware(['auth', 'verified'])->name('category.store');
 
 Route::get('/test', function() {
-    return Inertia::render('Testpage', ['exname' => 'テストしてるよ', 'category' => Category::first()]);
+    return Inertia::render('Testpage', ['exname' => 'テストしてるよ', 'categories' => Category::all()]);
 });
 
 Route::get('/test2', function() {
-    return Inertia::render('Testpage2', ['exname' => 'テストしてるよ2']);
+    return Inertia::render('Testpage2', ['exname' => 'テストしてるよ2', 'categories' => Category::all()]);
 });
 
 Route::get('/gridtest', function() {

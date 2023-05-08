@@ -8,8 +8,12 @@ const Testpage = (props) => {
         <>
           <Header2 exname={props.exname} />
           <p>{props.exname}</p>
-          <p>{props.category.name}</p>
-          <p>{props.category.user_id}</p>
+
+          <ul>
+          {props.categories.map((category) => (
+            <li>{category.name}</li>
+          ))}
+          </ul>
 
         </>
     );
