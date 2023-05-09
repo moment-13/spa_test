@@ -45,7 +45,7 @@ class CategoryController extends Controller
 
         $data = ['category' => $category];
 
-        return response()->json($$data);
+        return response()->json($data);
     }
 
     /**

@@ -5,6 +5,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\TodoController;
 use App\Models\Category;
 
 /*
@@ -35,6 +36,9 @@ Route::get('/dashboard', function () {
 // カテゴリ作成
 Route::post('/category/store',  [CategoryController::class, 'store'])
 ->middleware(['auth', 'verified'])->name('category.store');
+
+Route::post('/todo/store',  [TodoController::class, 'store'])
+->middleware(['auth', 'verified'])->name('todo.store');
 
 Route::get('/test', function() {
     return Inertia::render('Testpage', ['exname' => 'テストしてるよ', 'categories' => Category::all()]);

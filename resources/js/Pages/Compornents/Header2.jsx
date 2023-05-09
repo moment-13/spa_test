@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from '@inertiajs/react';
 
 const  Header2 = (props) =>  {
   return (
@@ -25,6 +26,7 @@ const  Header2 = (props) =>  {
             News
           </Typography>
           <p>{props.exname}</p>
+          <Button color="inherit" sx={{ flexGrow: 1 }}><Link href={route('dashboard')} >Dashboard</Link></Button>
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
