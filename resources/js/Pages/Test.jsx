@@ -12,7 +12,7 @@ const Test = () => {
         <Link href="/header" as="button" type="button">Header</Link>
         <Link href="/test" as="button" type="button">TestPage</Link>
         <Link href="/test2" as="button" type="button">TestPage2</Link>
-        <Link href="/gridtest" as="button" type="button">GridTest</Link>
+        <Link href="/file" as="button" type="button">FileUpload</Link>
         <Button>text</Button>
         <Button variant="contained">contained</Button>
         <Button variant="outlined">outlined</Button>

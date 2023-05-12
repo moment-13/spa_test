@@ -57,6 +57,9 @@ Route::get('/header', function () {
     return Inertia::render('Compornents/Header');
 })->name('header');
 
+Route::get('/file', function () {
+    return Inertia::render('FileTest');
+})->name('fileupload');
 
 
 Route::middleware('auth')->group(function () {
