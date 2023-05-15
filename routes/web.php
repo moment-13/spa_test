@@ -59,7 +59,7 @@ Route::get('/header', function () {
 
 Route::get('/file', function () {
     return Inertia::render('FileTest');
-})->name('fileupload');
+});
 
 
 Route::middleware('auth')->group(function () {
