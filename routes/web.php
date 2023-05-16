@@ -61,6 +61,10 @@ Route::get('/file', function () {
     return Inertia::render('FileTest');
 });
 
+Route::get('/ref', function () {
+    return Inertia::render('RefTest');
+});
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
