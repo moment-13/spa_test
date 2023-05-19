@@ -14,7 +14,7 @@ const RefTest = () => {
 
     return (
         <>
-          <input ref={fileEl} type="file" />
+          <input ref={fileEl} type="file" onChange={() => setValue(fileEl.current.files[0].name)} />
           <button onClick={handleClick}>Focus the input</button><br></br>
           <button onClick={() => setValue(fileEl.current.files[0].name)}>setValue</button><br></br>
           {value}

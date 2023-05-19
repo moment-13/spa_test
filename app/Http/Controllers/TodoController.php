@@ -42,6 +42,7 @@ class TodoController extends Controller
     public function store(RegisterTodoRequest $request)
     {
         //
+        dd($request);
 
         /**
          * ３項演算で、image_pathにファイルが存在するかどうか

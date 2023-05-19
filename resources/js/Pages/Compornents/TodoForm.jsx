@@ -24,12 +24,12 @@ export const TodoForm = (props) => {
 
       function submit(e) {
         e.preventDefault()
-        post('/todo/store')
+        post("/todo/store")
       }
 
     return (
         <>
-        <form onSubmit={submit}encType='multipart/form-data' >
+        <form onSubmit={submit}  >
           <Box sx={{ flexGrow: 1 }}>
            <Grid container alignItems='center' justifyContent='center' direction="column" spacing={2}>
             <Grid xs={4} md={4}>
@@ -91,7 +91,7 @@ export const TodoForm = (props) => {
             </div>
             </Grid>
             <Grid xs={6} md={6} >
-            <button type="submit" disabled={processing}>タスク作成</button>
+            <button type="submit" >タスク作成</button>
             </Grid>
           </Grid>
           </Box>
