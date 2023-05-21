@@ -16,7 +16,7 @@ export const TodoForm = (props) => {
     const { data, setData, post, processing, errors } = useForm({
         title: '',
         detail: '',
-        due_time: '',
+        due_date: '',
         priority: '',
         image_path: '',
         category_id: '',
@@ -41,11 +41,11 @@ export const TodoForm = (props) => {
             <Grid xs={6} md={6} >
               {/* Gridの中で中央寄せにならなかったのでdivにtailwindで中央寄せさせる */}
               <div className='flex justify-center items-center'>
-                <label htmlFor='due_time' className='block text-gray-500  md:text-right mb-1 md:mb-0 pr-4'>タスクの期日</label>
-              <input id='due_time' className='w-6/12' type='date' onChange={e => setData('due_time', e.target.value)}  />
+                <label htmlFor='due_date' className='block text-gray-500  md:text-right mb-1 md:mb-0 pr-4'>タスクの期日</label>
+              <input id='due_date' className='w-6/12' type='date' onChange={e => setData('due_date', e.target.value)}  />
               </div>
             </Grid>
-              <Button onClick={() => {console.log(data.due_time);}}>コンソール</Button>
+              <Button onClick={() => {console.log(data.due_date);}}>コンソール</Button>
             <Grid xs={6} md={6} >
             <div className='flex justify-center items-center'>
               <FormControl sx={{ m: 1, width: 300 }}>
@@ -86,12 +86,13 @@ export const TodoForm = (props) => {
             <Grid xs={6} md={6} >
             <div className='flex justify-center items-center'>
             <label htmlFor="image_path" className='block text-sm text-gray-500 dark:text-gray-300'>画像</label>
-            <input type="file" ref={fileRef} className="relative m-0 block min-w-0 w-1/2 cursor-pointer rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] font-normal leading-[2.15] text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-blue-400 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary" onChange={() => setData('image_path', fileRef.current.files[0])} />
+            <input type="file" ref={fileRef} className="relative m-0 block min-w-0 w-1/2 cursor-pointer rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] font-normal leading-[2.15] text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-blue-400 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary" 
+            onChange={() => setData('image_path', fileRef.current.files[0])} />
             {errors.image_path && <div>{errors.image_path}</div>}
             </div>
             </Grid>
             <Grid xs={6} md={6} >
-            <button type="submit" >タスク作成</button>
+            <button type="submit" disabled={processing} >タスク作成</button>
             </Grid>
           </Grid>
           </Box>

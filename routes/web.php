@@ -7,6 +7,7 @@ use Inertia\Inertia;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\TodoController;
 use App\Models\Category;
+use App\Models\Todo;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,7 +42,7 @@ Route::post('/todo/store',  [TodoController::class, 'store'])
 ->middleware(['auth', 'verified'])->name('todo.store');
 
 Route::get('/test', function() {
-    return Inertia::render('Testpage', ['exname' => 'テストしてるよ', 'categories' => Category::all()]);
+    return Inertia::render('Testpage', ['todos' => Todo::all(), 'categories' => Category::all()]);
 });
 
 Route::get('/test2', function() {

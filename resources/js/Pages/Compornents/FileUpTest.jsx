@@ -10,7 +10,7 @@ export const FileUpTest = (props) => {
     const { data, setData, post, processing, errors } = useForm({
         title: '',
         detail: '',
-        due_time: '',
+        due_date: '',
         priority: '',
         image_path: '',
         category_id: '',
@@ -31,8 +31,8 @@ export const FileUpTest = (props) => {
 
               {/* Gridの中で中央寄せにならなかったのでdivにtailwindで中央寄せさせる */}
               <div className='flex justify-center items-center'>
-                <label htmlFor='due_time' className='block text-gray-500  md:text-right mb-1 md:mb-0 pr-4'>タスクの期日</label>
-              <input id='due_time' className='w-6/12' type='date' onChange={e => setData('due_time', e.target.value)}  />
+                <label htmlFor='due_date' className='block text-gray-500  md:text-right mb-1 md:mb-0 pr-4'>タスクの期日</label>
+              <input id='due_date' className='w-6/12' type='date' onChange={e => setData('due_date', e.target.value)}  />
               </div>
             <div className='flex justify-center items-center'>
 

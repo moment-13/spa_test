@@ -39,10 +39,10 @@ class TodoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(RegisterTodoRequest $request)
+    public function store(Request $request)
     {
         //
-        dd($request);
+  
 
         /**
          * ３項演算で、image_pathにファイルが存在するかどうか
@@ -67,6 +67,9 @@ class TodoController extends Controller
 
 
 
+
+
+
         try {
             // トランザクション開始
             DB::beginTransaction();
@@ -78,7 +81,7 @@ class TodoController extends Controller
             'due_date' => $request->due_date,
             'priority' => $request->priority,
             'image_path' => $image_path,
-            'category_id' => $request->category
+            'category_id' => $request->category_id,
         ]);
 
             // トランザクション開始してからここまでのDB操作を適用
