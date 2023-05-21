@@ -1,6 +1,6 @@
 import React from "react";
 import Header2 from "./Compornents/Header2";
-
+import { TodoList } from "./Compornents/TodoList";
 
 const Testpage = (props) => {
 
@@ -14,6 +14,10 @@ const Testpage = (props) => {
             <li>{category.name}</li>
           ))}
           </ul>
+          <br />
+          <br />
+          <TodoList todos={props.todos} />
+
 
         </>
     );
