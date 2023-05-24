@@ -41,6 +41,10 @@ Route::post('/category/store',  [CategoryController::class, 'store'])
 Route::post('/todo/store',  [TodoController::class, 'store'])
 ->middleware(['auth', 'verified'])->name('todo.store');
 
+
+
+
+
 Route::get('/test', function() {
     return Inertia::render('Testpage', ['todos' => Todo::all(), 'categories' => Category::all()]);
 });
@@ -69,6 +73,7 @@ Route::get('/ref', function () {
 Route::get('/upload', function () {
     return Inertia::render('UploadTest');
 });
+
 
 
 Route::middleware('auth')->group(function () {

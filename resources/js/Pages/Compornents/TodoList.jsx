@@ -30,7 +30,7 @@ export const TodoList = (props) =>  {
             <tr>
               <td className='border px-4 py-2'>{status}</td>
               <td className='border px-4 py-2'>{title}</td>
-              <td className='border px-4 py-2'>{due_date}</td>
+              <td className='border px-4 py-2'>{new Date(due_date).toLocaleDateString()}</td>
               <td className='border px-4 py-2'>{priority}</td>
               <td className='border px-4 py-2'>詳細Link: {id}</td>
               <td className='border px-4 py-2'>編集Link: {id}</td>
