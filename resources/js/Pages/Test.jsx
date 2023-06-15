@@ -14,6 +14,7 @@ const Test = () => {
         <Link href="/test2" as="button" type="button">TestPage2</Link>
         <Link href="/ref" as="button" type="button">RefTest</Link>
         <Link href="/upload" as="button" type="button">UploadTest</Link>
+        <Link href="/showtest" as="button" type="button">ShowTest</Link>
         <br></br>
 
         

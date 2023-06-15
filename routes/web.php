@@ -74,6 +74,9 @@ Route::get('/upload', function () {
     return Inertia::render('UploadTest');
 });
 
+Route::get('/showtest', function () {
+    return Inertia::render('Compornents/ShowTodo', ['todo' => Todo::first()]);
+});
 
 
 Route::middleware('auth')->group(function () {
